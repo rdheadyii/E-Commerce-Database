@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Product,
-          attributes: {include: ['id', 'product_name', 'price', 'category_id']}
+          attributes: ['id', 'product_name', 'price', 'category_id']
         }
       ]
     })
@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Product,
-          attributes: {include: ['id', 'product_name', 'price', 'category_id']}
+          attributes: ['id', 'product_name', 'price', 'category_id']
         }
       ]
     })
